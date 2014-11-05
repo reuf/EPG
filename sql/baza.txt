@@ -1,0 +1,59 @@
+EPGDAN
+id INT 11
+epgdatum DATE
+
+EPGEMISIJA
+id INT 11
+vrijeme VARCHAR
+naslovemisije VARCHAR
+kratkiopis VARCHAR
+dugiopis TEXT
+ostalo VARCHAR
+epgtipemisije INT 11
+epgrprating INT 11
+epgkanal INT 11
+fkepgdan INT 11
+
+$broj_emisija_forma = $_REQUEST['broj_emisija'];
+$broj_emisija_baza = SELECT COUNT(*) AS broj_emisija FROM EPGEMISIJA WHERE fkepgdan = (SELECT id FROM EPGDAN WHERE epgdatum = $date_item);
+
+INSERT OR UPDATE/DELETE
+
+if ($broj_emisija_baza = $broj_emisija_forma){
+for($i = 1; i <= $broj_emisija_forma; $i++){
+	update
+}
+
+else if ($broj_emisija_forma < $broj_emisija_baza){
+
+	for ($i = 1; i <= $broj_emisija_forma; $i++){
+		update
+	}
+
+	for ( $i = $broj_emisija+1 <= $broj_emisija_baza ){
+		delete
+	}
+}
+
+else if ($broj_emisija_baza < $broj_emisija_forma){
+
+	$id_dana = select id from epgdan where date = date
+	if ($id_dana == 0) {
+		insert date into epgdan
+			for ( $i = $broj_emisija+1 <= $broj_emisija_baza ){
+
+
+				for
+					insertset fkepgdan = id
+			}
+	}
+	else {
+		for ($i = 1; i <= $broj_emisija_forma; $i++){
+			update
+		}
+	}
+}
+
+GET ALL
+
+$get_all = select * from broj_emisija where epgdatum = (select id from epgdan where epgdatum=epgdatum);

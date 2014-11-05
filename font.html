@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>jQuery UI Datepicker - Restrict date range</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <script>
+
+  var curr = new Date; // get current date
+  var first = curr.getDate() - curr.getDay() + 1; // First day is the day of the month - the day of the week
+  var last = first + 6; // last day is the first day + 6
+
+  var today = new Date(curr);
+  var firstday = new Date(curr.setDate(first));
+  var lastday = new Date(curr.setDate(last));
+
+  var max = dhm(lastday-today);
+  var min = dhm(today-firstday);
+
+  function dhm(t){
+      var cd = 24 * 60 * 60 * 1000,
+          ch = 60 * 60 * 1000,
+          d = Math.floor(t / cd),
+          h = '0' + Math.floor( (t - d * cd) / ch),
+          m = '0' + Math.round( (t - d * cd - h * ch) / 60000);
+      return [d];
+  }
+
+  $(function() {
+    $( "#datepicker" ).datepicker({
+      minDate: "-"+min+"D",
+      maxDate: "+"+max+"D",
+      onSelect: function(date){
+
+      }
+    });
+  });
+
+  </script>
+</head>
+<body>
+
+<p>Date: <input type="text" id="datepicker" /></p>
+div.
+
+</body>
+</html>

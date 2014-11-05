@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- CSS Include Files -->
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="css/epg.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.ui.timepicker.css">
+
+		<!-- JS Include Files -->
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/site.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.blockUI.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.ui.timepicker.js"></script>
+	</head>
+
+	<body style="cursor: auto;">
+		<div id="fw_body">
+			<form id="epg_form">
+				<table border="0" cellspacing="5" cellpadding="5">
+					<tr>
+						<td>Izaberi kanal</td>
+						<td>
+							<select name="kanal" id="kanal">
+								<option value="televizija" selected="selected">Televizija</option>
+							 	<option value="radio">Radio</option>
+							</select>
+						</td>
+
+					</tr>
+					<tr>
+						<td>Izaberi Dan</td>
+						<td>
+							<input type="text" id="datum" name="datum" value="">
+						</td>
+						<td>
+							<button id="btnprikazi" class="btnprikazi">Prikaži</button>
+						</td>
+					</tr>
+				</table>
+
+				<input id="column_count" type="hidden" name="columns" value="9">
+
+				<input id="action" type="hidden" name="action" value="">
+
+				<div class="box" style="width:1200px; margin-left: -120px; margin-top: -20px;">
+						<h4>EPG Listing za dan:
+							<span class="epgdan" style="font-size:120%; color:red; font-weight:bold;"></span> - kanal:
+							<span class="epgkanal" style="font-size:120%; color:red; font-weight:bold;"></span>
+						</h4>
+						<div style="position:relative; float:right">
+							<button id="btnspasi" class="btnspasi" style="display:none;">Spasi</button>
+						</div>
+						<table id="epg" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:1em;">
+							<thead>
+								<tr>
+									<th rowspan="1">R.B.</th>
+									<th rowspan="1">Vrijeme</th>
+									<th rowspan="1">Naslov Emisije</th>
+									<th rowspan="1">Tip Emisije</th>
+									<th rowspan="1">Krakti Opis</th>
+									<th rowspan="1">Dugi Opis</th>
+									<th rowspan="1">Ostalo</th>
+									<th rowspan="1">RP Rejting</th>
+									<th rowspan="1">Obrisi</th>
+								</tr>
+							</thead>
+							<tbody class="ui-sortable"></tbody>
+							<tfoot>
+								<tr>
+									<td colspan="11">
+									  Dodaj: <input id="add_input" type="number" style="width:40px;height:25px;" min="1" max="30" value="1"> <button id="add_button">polje/a</button>
+									</td>
+
+								</tr>
+							</tfoot>
+						</table>
+				</div>
+			</form>
+		</div>
+		<div class="modal"></div>
+		<div id="dialog-message" title="Uspjeh" style="display:none;">
+			  <p>
+			    Podaci su uspjesno spaseni u bazu.
+			  </p>
+		</div>
+<!-- 	<div id="question" style="display:none; cursor: default">
+        <h1>Would you like to contine?.</h1>
+        <input type="button" id="yes" value="Yes" />
+        <input type="button" id="no" value="No" />
+	</div> -->
+<!-- 	<p>Ispis debuga:</p>
+	<div id="debug">
+	</div> -->
+</body>
+<script type="text/javascript" src="js/epg.js"></script>
+</html>

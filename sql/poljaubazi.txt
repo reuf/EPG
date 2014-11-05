@@ -1,0 +1,26 @@
+vrijeme
+naslov_emisije
+tip_emisije
+kratki_opis
+dugi_opis
+ostalo
+
+Ostala Potencijalna polja:
+naslov
+kratki_opis
+tip_emisije
+originalni_naslov
+godina
+redatelji
+naziv_epizode
+broj_epizode
+broj_sezone
+trajanje
+roditeljska_zaštita
+zanr
+zemlja
+scenaristi
+glumci
+url
+dugi_opis
+slika

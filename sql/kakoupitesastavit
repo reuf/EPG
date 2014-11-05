@@ -1,0 +1,11 @@
+Kako raditi prikaz na Frontendu
+select start_date_id where start_date=x
+select end_date_id where end_date=x
+select sve between start_date_id=x and end_date_id=y
+
+Backend operacije
+select za datum:
+
+insert za datum:
+
+update za datum:

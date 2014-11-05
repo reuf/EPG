@@ -1,0 +1,449 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>jQuery UI Tabs - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+  <script>
+    Date.prototype.getWeek = function(start)
+    {
+            //Calcing the starting point
+        start = start || 0;
+        var today = new Date(this.setHours(0, 0, 0, 0));
+        var day = today.getDay() - start;
+        var date = today.getDate() - day;
+
+            // Grabbing Start/End Dates
+        var StartDate = new Date(today.setDate(date));
+        var EndDate = new Date(today.setDate(date + 6));
+        return [StartDate, EndDate];
+    }
+
+    // test code
+    var Dates = new Date().getWeek();
+    //alert(Dates[0].toLocaleDateString() + ' to '+ Dates[1].toLocaleDateString())
+</script>
+</head>
+<body>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Subota</a></li>
+    <li><a href="#tabs-2">Nedjelja</a></li>
+    <li><a href="#tabs-3">Ponedjeljak</a></li>
+    <li><a href="#tabs-4">Utorak</a></li>
+    <li><a href="#tabs-5">Srijeda</a></li>
+    <li><a href="#tabs-6">Cetvrtak</a></li>
+    <li><a href="#tabs-7">Petak</a></li>
+
+  </ul>
+  <div id="tabs-1">
+    <h4>Program</h4>
+    <table border="0">
+    <tr>
+      <th>Vrijeme</th>
+      <td>Emisija</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    </table>
+  </div>
+  <div id="tabs-2">
+    <h4>Program</h4>
+    <table border="0">
+    <tr>
+      <th>Vrijeme</th>
+      <td>Emisija</td>
+    </tr>
+    <tr>
+      <th>07:10</th>
+      <td>Muzicki Program</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>07:10</th>
+      <td>Muzicki Program</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>07:10</th>
+      <td>Muzicki Program</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>07:10</th>
+      <td>Muzicki Program</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>07:10</th>
+      <td>Muzicki Program</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>07:10</th>
+      <td>Muzicki Program</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    </table>
+  </div>
+  <div id="tabs-3">
+        <h4>Program</h4>
+    <table border="0">
+    <tr>
+      <th>Vrijeme</th>
+      <td>Emisija</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    </table>
+  </div>
+    <div id="tabs-4">
+        <h4>Program</h4>
+    <table border="0">
+    <tr>
+      <th>Vrijeme</th>
+      <td>Emisija</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>10:50</th>
+      <td>Zemlja Snova</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    </table>
+  </div>
+    <div id="tabs-5">
+        <h4>Program</h4>
+    <table border="0">
+    <tr>
+      <th>Vrijeme</th>
+      <td>Emisija</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>20:00</th>
+      <td>Raspad Sistema</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>20:00</th>
+      <td>Raspad Sistema</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>20:00</th>
+      <td>Raspad Sistema</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>20:00</th>
+      <td>Raspad Sistema</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>20:00</th>
+      <td>Raspad Sistema</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>20:00</th>
+      <td>Raspad Sistema</td>
+    </tr>
+    </table>
+  </div>
+    <div id="tabs-6">
+        <h4>Program</h4>
+    <table border="0">
+    <tr>
+      <th>Vrijeme</th>
+      <td>Emisija</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Kretenizam i Renesansa</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Kretenizam i Renesansa</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Kretenizam i Renesansa</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Kretenizam i Renesansa</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Kretenizam i Renesansa</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Kretenizam i Renesansa</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    </table>
+  </div>
+    <div id="tabs-7">
+        <h4>Program</h4>
+    <table border="0">
+    <tr>
+      <th>Vrijeme</th>
+      <td>Emisija</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Kretenizam i Renesansa</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Kretenizam i Renesansa</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Kretenizam i Renesansa</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    <tr>
+      <th>22:30</th>
+      <td>Dnevnik3</td>
+    </tr>
+    <tr>
+      <th>23:00</th>
+      <td>Jazz Program</td>
+    </tr>
+    </table>
+  </div>
+</div>
+
+
+</body>
+</html>
